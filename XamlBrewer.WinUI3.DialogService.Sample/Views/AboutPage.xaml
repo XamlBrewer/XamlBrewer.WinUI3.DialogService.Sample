@@ -1,0 +1,24 @@
+﻿<Page x:Class="XamlBrewer.WinUI3.DialogService.Sample.Views.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="Transparent">
+
+    <Grid Margin="40 40 20 80"
+          ColumnSpacing="0"
+          RowSpacing="0">
+        <TextBlock FontSize="20">
+            <Run Text="Sample demonstrating an MVVM Dialog Service in a WinUI 3 Desktop application:" />
+            <LineBreak />
+            <Run>* Message Dialog, Confirmation Dialog, Input Dialog</Run><LineBreak />
+            <Run>* Binding and x:Bind</Run><LineBreak />
+            <Run>* Command and EventHandler</Run><LineBreak />
+            <Run>* Callable from View and ViewModel (and more)</Run><LineBreak />
+            <Run>* Theming</Run><LineBreak />            
+            <LineBreak /><LineBreak />
+            <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://github.com/DialogService/DialogService/tree/develop/Source/Examples">official DialogService Samples</Hyperlink><Run>.</Run>
+        </TextBlock>
+    </Grid>
+</Page>

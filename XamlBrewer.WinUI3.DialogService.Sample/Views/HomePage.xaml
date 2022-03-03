@@ -1,0 +1,52 @@
+﻿<Page x:Class="XamlBrewer.WinUI3.DialogService.Sample.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewmodels="using:XamlBrewer.WinUI3.DialogService.Sample.ViewModels"
+      mc:Ignorable="d"
+      Background="Transparent">
+
+    <Page.DataContext>
+        <viewmodels:HomePageViewModel />
+    </Page.DataContext>
+    
+    <Grid Margin="0 0 0 80">
+        <!-- Beef -->
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    >
+            <!-- Click Event Handler in the View -->
+            <Button Content="Message Dialog"
+                    Click="MessageBox_Click"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    Margin="0 20 0 0" />
+            <!-- Binding to Command in ViewModel -->
+            <Button Content="2-Button Confirmation Dialog"
+                    Command="{Binding ConfirmationCommandYesNo}"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    Margin="0 20 0 0" />
+            <!-- Binding to Command in ViewModel -->
+            <Button Content="3-Button Confirmation Dialog"
+                    Command="{Binding ConfirmationCommandYesNoCancel}"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    Margin="0 20 0 0" />
+            <!-- x:Bind to Command in ViewModel -->
+            <Button Content="String Input Dialog"
+                    Command="{x:Bind ViewModel.InputStringCommand}"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    Margin="0 20 0 0" />
+            <!-- x:Bind to Method in ViewModel -->
+            <Button Content="Text Input Dialog"
+                    Click="{x:Bind ViewModel.InputText_Click}"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    Margin="0 20 0 0" />
+        </StackPanel>
+    </Grid>
+</Page>
