@@ -1,18 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.UI.Xaml;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using XamlBrewer.WinUI3.Services;
 
 namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
 {
-    public class HomePageViewModel: ObservableObject
+    public class HomePageViewModel : ObservableObject
     {
         public ICommand ConfirmationCommandYesNo => new AsyncRelayCommand(ConfirmationYesNo_Executed);
 
@@ -24,10 +20,10 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
         {
             Debug.WriteLine("Opening Text Input Dialog.");
             var inputText = await App.MainRoot.InputTextDialogAsync(
-                "What would Faramir say?",
-                "“War must be, while we defend our lives against a destroyer who would devour all; but I do not love the bright sword for its sharpness, nor the arrow for its swiftness, nor the warrior for his glory. I love only that which they defend.”\n\nJ.R.R. Tolkien"
+                    "What would Faramir say?",
+                    "“War must be, while we defend our lives against a destroyer who would devour all; but I do not love the bright sword for its sharpness, nor the arrow for its swiftness, nor the warrior for his glory. I love only that which they defend.”\n\nJ.R.R. Tolkien"
                 );
-            Debug.WriteLine(string.Format("Text Input Dialog was closed with {0}.", inputText));
+            Debug.WriteLine($"Text Input Dialog was closed with {inputText}.");
         }
 
         private async Task ConfirmationYesNo_Executed()
@@ -38,7 +34,7 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
                     "Freedom Blue",
                     "Energizing Yellow"
                 );
-            Debug.WriteLine("2-State Confirmation Dialog was closed with {0}.", confirmed);
+            Debug.WriteLine($"2-State Confirmation Dialog was closed with {confirmed}.");
         }
 
         private async Task ConfirmationYesNoCancel_Executed()
@@ -50,19 +46,19 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
                     "That's insane",
                     "I don't understand"
                 );
-            Debug.WriteLine("3-State Confirmation Dialog was closed with {0}.", confirmed);
+            Debug.WriteLine($"3-State Confirmation Dialog was closed with {confirmed}.");
         }
 
         private async Task InputString_Executed()
         {
             Debug.WriteLine("Opening String Input Dialog.");
             var inputString = await App.MainRoot.InputStringDialogAsync(
-                "How can we help you?",
-                "I need ammunition, not a ride.",
-                "OK",
-                "Forget it"
+                    "How can we help you?",
+                    "I need ammunition, not a ride.",
+                    "OK",
+                    "Forget it"
                 );
-            Debug.WriteLine(string.Format("String Input Dialog was closed with {0}.", inputString));
+            Debug.WriteLine($"String Input Dialog was closed with '{inputString}'.");
         }
     }
 }

@@ -28,6 +28,7 @@ namespace XamlBrewer.WinUI3.Services
 
             await dialog.ShowAsync();
         }
+
         public static async Task<bool?> ConfirmationDialogAsync(this FrameworkElement element, string title)
         {
             return await ConfirmationDialogAsync(element, title, "OK", string.Empty, "Cancel");
