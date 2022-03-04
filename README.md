@@ -8,7 +8,7 @@ Demonstrates an MVVM DialogService in a WinUI 3 Desktop application:
 
 ## Some screenshots:
 
-Message Dialog
+Message Dialog:
 ![Screenshot](Assets/MessageDialog.png?raw=true)
 
 YesNo Confirmation Dialog:
