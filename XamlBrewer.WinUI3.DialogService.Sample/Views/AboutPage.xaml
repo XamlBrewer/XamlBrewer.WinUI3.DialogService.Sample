@@ -17,8 +17,6 @@
             <Run>* Command and EventHandler</Run><LineBreak />
             <Run>* Callable from View and ViewModel (and more)</Run><LineBreak />
             <Run>* Theming</Run><LineBreak />            
-            <LineBreak /><LineBreak />
-            <Run Text="All diagrams are from the " /><Hyperlink NavigateUri="https://github.com/DialogService/DialogService/tree/develop/Source/Examples">official DialogService Samples</Hyperlink><Run>.</Run>
         </TextBlock>
     </Grid>
 </Page>

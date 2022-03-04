@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\About.png" />
+    <None Remove="Assets\Flag.png" />
     <None Remove="Assets\Home.png" />
     <None Remove="Shell.xaml" />
     <None Remove="Views\AboutPage.xaml" />

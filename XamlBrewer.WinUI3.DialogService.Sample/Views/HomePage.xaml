@@ -10,43 +10,52 @@
     <Page.DataContext>
         <viewmodels:HomePageViewModel />
     </Page.DataContext>
-    
+
     <Grid Margin="0 0 0 80">
         <!-- Beef -->
         <StackPanel Orientation="Vertical"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Left"
-                    >
+                    HorizontalAlignment="Left">
             <!-- Click Event Handler in the View -->
             <Button Content="Message Dialog"
                     Click="MessageBox_Click"
                     HorizontalAlignment="Stretch"
                     Padding="10"
-                    Margin="0 20 0 0" />
+                    Margin="0 20 0 0"
+                    Background="DodgerBlue"
+                    Foreground="Yellow" />
             <!-- Binding to Command in ViewModel -->
             <Button Content="2-Button Confirmation Dialog"
                     Command="{Binding ConfirmationCommandYesNo}"
                     HorizontalAlignment="Stretch"
                     Padding="10"
-                    Margin="0 20 0 0" />
+                    Margin="0 20 0 0"
+                    Background="DodgerBlue"
+                    Foreground="Yellow" />
             <!-- Binding to Command in ViewModel -->
             <Button Content="3-Button Confirmation Dialog"
                     Command="{Binding ConfirmationCommandYesNoCancel}"
                     HorizontalAlignment="Stretch"
                     Padding="10"
-                    Margin="0 20 0 0" />
+                    Margin="0 20 0 0"
+                    Background="DodgerBlue"
+                    Foreground="Yellow" />
             <!-- x:Bind to Command in ViewModel -->
             <Button Content="String Input Dialog"
                     Command="{x:Bind ViewModel.InputStringCommand}"
                     HorizontalAlignment="Stretch"
                     Padding="10"
-                    Margin="0 20 0 0" />
+                    Margin="0 20 0 0"
+                    Background="DodgerBlue"
+                    Foreground="Yellow" />
             <!-- x:Bind to Method in ViewModel -->
             <Button Content="Text Input Dialog"
                     Click="{x:Bind ViewModel.InputText_Click}"
                     HorizontalAlignment="Stretch"
                     Padding="10"
-                    Margin="0 20 0 0" />
+                    Margin="0 20 0 0"
+                    Background="DodgerBlue"
+                    Foreground="Yellow" />
         </StackPanel>
     </Grid>
 </Page>
