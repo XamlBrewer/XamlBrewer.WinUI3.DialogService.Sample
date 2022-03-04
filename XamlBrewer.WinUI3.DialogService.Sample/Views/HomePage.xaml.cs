@@ -19,7 +19,7 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.Views
         {
             Debug.WriteLine("Message Dialog will be opened.");
 
-            await this.MessageDialogAsync("Ready to go?", "Place a cat, a flask of poison, and a radioactive source in a sealed box.", "Got it");
+            await this.MessageDialogAsync("All we are saying:", "Give peace a chance.", "Got it");
 
             Debug.WriteLine("Message Dialog was closed.");
         }

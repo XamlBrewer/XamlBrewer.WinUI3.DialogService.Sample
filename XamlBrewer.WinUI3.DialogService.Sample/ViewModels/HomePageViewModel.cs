@@ -24,8 +24,8 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
         {
             Debug.WriteLine("Opening Text Input Dialog.");
             var inputText = await App.MainRoot.InputTextDialogAsync(
-                "What whas your point actually?",
-                "I just wanted to criticize the existing view of quantum mechanics by explaining how one could, in principle, create a superposition in a large-scale system by making it dependent on a quantum particle that was in a superposition, and end up in an ridiculous state.\n\nAnd I hate cats anyway..."
+                "What would Faramir say?",
+                "“War must be, while we defend our lives against a destroyer who would devour all; but I do not love the bright sword for its sharpness, nor the arrow for its swiftness, nor the warrior for his glory. I love only that which they defend.”\n\nJ.R.R. Tolkien"
                 );
             Debug.WriteLine(string.Format("Text Input Dialog was closed with {0}.", inputText));
         }
@@ -34,9 +34,9 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
         {
             Debug.WriteLine("2-State Confirmation Dialog will be opened.");
             var confirmed = await App.MainRoot.ConfirmationDialogAsync(
-                    "Are you planning to open the box?",
-                    "Sure",
-                    "No, thanks"
+                    "What Pantone color do you prefer?",
+                    "Freedom Blue",
+                    "Energizing Yellow"
                 );
             Debug.WriteLine("2-State Confirmation Dialog was closed with {0}.", confirmed);
         }
@@ -45,10 +45,10 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
         {
             Debug.WriteLine("3-State Confirmation Dialog will be opened.");
             var confirmed = await App.MainRoot.ConfirmationDialogAsync(
-                    "So, what's the status of the cat?\nHint: use Quantum Mechanics.",
-                    "It's alive",
-                    "It's dead",
-                    "It's both"
+                    "Is it wise to use artillery against a nuclear power plant?",
+                    "да",
+                    "That's insane",
+                    "I don't understand"
                 );
             Debug.WriteLine("3-State Confirmation Dialog was closed with {0}.", confirmed);
         }
@@ -57,9 +57,9 @@ namespace XamlBrewer.WinUI3.DialogService.Sample.ViewModels
         {
             Debug.WriteLine("Opening String Input Dialog.");
             var inputString = await App.MainRoot.InputStringDialogAsync(
-                "How do you want to call this phenomenon?",
-                "Verschränkung",
-                "Claim",
+                "How can we help you?",
+                "I need ammunition, not a ride.",
+                "OK",
                 "Forget it"
                 );
             Debug.WriteLine(string.Format("String Input Dialog was closed with {0}.", inputString));
